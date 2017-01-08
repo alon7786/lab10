@@ -16,7 +16,12 @@
 #define DIGITS 80
 #define ASCII_OFFSET '0'
 typedef char* verylong;
-char freq_letter( char * );verylong add_verylong( verylong, verylong );verylong input_long();
+
+char freq_letter( char * );
+verylong add_verylong( verylong, verylong );
+verylong input_long();
+
+
 void main()
 {
 	char string[] = "happynewnewyear";
@@ -28,6 +33,9 @@ void main()
 	y = input_long();
 	result = add_verylong( x, y );
 	printf( "   %s\n + %s\n = %s\n", x, y, result );
+	free( result );
+	free( x );
+	free( y );
 	system( "pause" );
 }
 
